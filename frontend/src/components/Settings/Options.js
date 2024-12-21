@@ -347,7 +347,7 @@ export default function Options(props) {
       key: "scheduleType",
       value,
     });
-    //toast.success("Oraçãpeo atualizada com sucesso.");
+    //toast.success("Opção atualizada com sucesso.");
     toast.success('Operação atualizada com sucesso.', {
       position: "top-right",
       autoClose: 2000,
