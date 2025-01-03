@@ -1957,6 +1957,7 @@ const handleMessage = async (
         !hasMedia &&
         msgType !== "conversation" &&
         msgType !== "extendedTextMessage" &&
+        msgType !== "reactionMessage" &&
         msgType !== "vcard"
       )
         return;
@@ -2136,8 +2137,7 @@ const handleMessage = async (
           !isNil(currentSchedule) &&
           (!currentSchedule || currentSchedule.inActivity === false)
         ) {
-          const body = `\u200e ${whatsapp.outOfHoursMessage},
-            contact`;
+          const body = `\u200e ${whatsapp.outOfHoursMessage}`;
 
           console.log('body9341023', body)
           const debouncedSentMessage = debounce(
@@ -2195,7 +2195,7 @@ const handleMessage = async (
             const endTimeB = moment(schedule.endTimeB, "HH:mm");
 
             if (now.isBefore(startTimeA) || now.isAfter(endTimeA) && (now.isBefore(startTimeB) || now.isAfter(endTimeB))) {
-              const body = `${queue.outOfHoursMessage}, contact`;
+              const body = `${queue.outOfHoursMessage}`;
               console.log('body:23801', body)
               const debouncedSentMessage = debounce(
                 async () => {

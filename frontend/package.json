@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "versionSystem": "v5.5.0",
-  "nomeEmpresa": "Chatbot - Nuvem JTi",
+  "nomeEmpresa": "Nuvem JTi - Chatbot",
   "private": true,
   "dependencies": {
     "@date-io/date-fns": "^2.14.0",
